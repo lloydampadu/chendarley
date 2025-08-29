@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
 import "./globals.css";
+import Header from "./component/Header";
 
 const urbanist = Urbanist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Sasu Lloyd",
-  description: "Private Tutor and Junior Developer",
+  title: "Chen Darley",
+  description: "A Farm Built on Quality, Trust, and Care",
 };
 
 export default function RootLayout({
@@ -17,6 +18,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="min-h-screen">
       <body className={urbanist.className}>
+                <Header />
+
         {children}
       </body>
     </html>
