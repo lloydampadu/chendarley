@@ -7,7 +7,7 @@ import { MdMenu, MdClose } from "react-icons/md";
 import { usePathname } from "next/navigation";
 
 const NAV_ITEMS = [
-  { label: "Home", link: "/home" },
+  { label: "Home", link: "/" },
   { label: "About Us", link: "/aboutus" },
   { label: "Services", link: "/services" },
   { label: "Contact", link: "/contact" },
