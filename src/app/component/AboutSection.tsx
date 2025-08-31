@@ -14,7 +14,7 @@ export default function AboutSection() {
           className="w-full md:w-1/2"
         >
           <Image
-            src="/chendarley.jpg"
+            src="/images/chendarley.jpg"
             alt="Chen Darley Farm"
             width={600}
             height={400}
