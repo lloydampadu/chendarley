@@ -77,26 +77,12 @@ export default function EnterpriseImageHero() {
           className="absolute inset-0"
           style={{ y: backgroundY, x: mouseXSpring, scale: heroScale }}
         >
-          <div className="absolute inset-0">
-            {typeof window !== "undefined" && window.innerWidth < 768 ? (
-                <Image
-                src="/images/ricefarm.jpg"
-                alt="Farm Mobile"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 100vw" // mobile gets smaller image
-
-                />
-            ) : (
-                <Image
-                src="/images/farmwithcontainer.jpg"
-                alt="Farm Desktop"
-                fill
-                className="object-cover"
-                />
-              )}
-            </div>
-
+          <Image
+            src="/images/ricefarm.jpg"
+            alt="Farm with Container"
+            fill
+            className="object-cover hover:scale-105 transition-transform duration-500"
+          />
         </motion.div>
 
         {/* Overlay */}
