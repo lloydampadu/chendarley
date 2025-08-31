@@ -10,10 +10,10 @@ export default function Home() {
 
     <div className='w-full overflow-x-hidden'>
       <HeroVideoClient />
-      <Features />
+      {/* <Features />
       <AboutSection />
       <ProductsSection />
-      <GallerySection />
+      <GallerySection /> */}
     </div>
 
   );
