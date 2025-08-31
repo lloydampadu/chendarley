@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default function GallerySection() {
   const images = [
-    "/grains.webp",
-    "/tractor.webp",
-    "/waterspray.webp",
-    "/car.jpg",
+    "/images/grains.webp",
+    "/images/tractor.webp",
+    "/images/waterspray.webp",
+    "/images/car.jpg",
   ];
 
   return (

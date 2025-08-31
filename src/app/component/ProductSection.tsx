@@ -6,17 +6,17 @@ const products = [
   {
     name: "Premium White Rice",
     desc: "Soft, fragrant, and carefully processed for bulk distribution.",
-    img: "/whiterice.jpg",
+    img: "/images/whiterice.jpg",
   },
   {
     name: "Brown Rice",
     desc: "A wholesome, nutrient-rich option for health-conscious consumers.",
-    img: "/brownrice.jpg",
+    img: "/images/brownrice.jpg",
   },
   {
     name: "Broken Rice",
     desc: "Cost-effective, quality rice ideal for food services and industries.",
-    img: "/brokenrice.jpg",
+    img: "/images/brokenrice.jpg",
   },
 ];
 
