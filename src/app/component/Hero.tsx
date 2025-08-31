@@ -23,7 +23,7 @@ export default function HeroVideo() {
         loop
         muted
         playsInline
-        poster="/images/farm-placeholder.jpg"
+        poster="/images/videofallback.png"
       />
 
       {/* Dark Overlay */}
