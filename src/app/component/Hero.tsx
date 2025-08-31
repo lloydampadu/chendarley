@@ -1,48 +1,65 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
-export default function Hero() {
+export default function HeroVideo() {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
+  const videoScale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
+
   return (
-   <div className="relative w-full h-screen flex items-center justify-center bg-black overflow-hidden">
-      {/* Hero Image */}
-      <motion.div
-        className="absolute inset-0"
-        initial={{ scale: 1.1, opacity: 0.5 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1.5, ease: 'easeOut' }}
-      >
-        <Image
-          src="/name.jpg"
-          alt="Chen Darley Farm"
-          fill
-          style={{ objectFit: 'cover', objectPosition: 'center' }}
-          priority
-        />
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50" />
-      </motion.div>
+    <section ref={ref} className="relative w-full h-screen overflow-hidden">
+      {/* Background Video */}
+      <motion.video
+        style={{ scale: videoScale }}
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        src="/videos/farm.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+        poster="/images/farm-placeholder.jpg"
+      />
 
-      {/* Animated Text */}
+      {/* Dark Overlay */}
+      <div className="absolute top-0 left-0 w-full h-full bg-black/40 z-10"></div>
+
+      {/* Hero Content */}
       <motion.div
-        className="relative z-10 text-center text-white px-4"
-        initial={{ opacity: 0, y: 40 }}
+        className="relative z-20 flex flex-col items-center justify-center h-full text-center px-4"
+        initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.5, ease: 'easeOut' }}
+        transition={{ duration: 1 }}
       >
-        <h1 className="text-5xl md:text-6xl font-bold drop-shadow-lg">
-          Welcome to <span className='text-emerald-500'>Chen Darley</span>
-        </h1>
-        <motion.p
-          className="mt-4 text-lg md:text-xl max-w-xl mx-auto drop-shadow-md"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1, ease: 'easeOut' }}
+        <motion.h1
+          className="text-5xl md:text-7xl font-bold text-white"
+          whileHover={{ scale: 1.05 }}
         >
-          Growing premium rice with care, straight from our lush fields to your business.
+          Chen-Darley Group Ghana
+        </motion.h1>
+
+        <motion.p
+          className="text-xl md:text-2xl text-white mt-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+        >
+          Agriculture • Oil & Gas • Mining • Commodities
         </motion.p>
+
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          className="mt-6 px-8 py-3 bg-green-600 text-white rounded-full text-lg font-medium shadow-lg"
+        >
+          Explore More
+        </motion.button>
       </motion.div>
-    </div>
+    </section>
   );
 }

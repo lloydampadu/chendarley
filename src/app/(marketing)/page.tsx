@@ -1,14 +1,14 @@
 import AboutSection from "../component/AboutSection";
 import Features from "../component/Featured";
 import GallerySection from "../component/GallerySection";
-import Hero from "../component/Hero";
+import HeroVideoClient from "../component/HeroVideoClient";
 import ProductsSection from "../component/ProductSection";
 
 
 export default function Home() {
   return (
     <div>
-      <Hero />
+      <HeroVideoClient />
       <Features />
       <AboutSection />
       <ProductsSection />
