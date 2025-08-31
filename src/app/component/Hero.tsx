@@ -80,7 +80,7 @@ export default function EnterpriseImageHero() {
           <div className="absolute inset-0">
             {typeof window !== "undefined" && window.innerWidth < 768 ? (
                 <Image
-                src="/images/heromobile.jpg"
+                src="/images/ricefarm.jpg"
                 alt="Farm Mobile"
                 fill
                 className="object-cover"
