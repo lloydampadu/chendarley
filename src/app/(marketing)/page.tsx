@@ -1,20 +1,40 @@
-import AboutSection from "../component/AboutSection";
-import Features from "../component/Featured";
-import GallerySection from "../component/GallerySection";
+import CarouselHero from "../component/CarouselHero";
+import EnterpriseImageHero from "../component/Hero";
 import HeroVideoClient from "../component/HeroVideoClient";
-import ProductsSection from "../component/ProductSection";
+import ImageHero from "../component/ImageHero";
+import ScrollVideoHero from "../component/ScrollVideoHero";
 
 
 export default function Home() {
   return (
 
-    <div className='w-full overflow-x-hidden'>
+    <div className='w-full'>
+      <EnterpriseImageHero/>
+
+      <div className="my-8 text-center">or</div>
+
       <HeroVideoClient />
-      {/* <Features />
-      <AboutSection />
-      <ProductsSection />
-      <GallerySection /> */}
+      
     </div>
 
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{/* <Features />
+      <AboutSection />
+      <ProductsSection />
+      <GallerySection /> */}
