@@ -7,7 +7,8 @@ import ProductsSection from "../component/ProductSection";
 
 export default function Home() {
   return (
-    <div>
+
+    <div className='w-full overflow-x-hidden'>
       <HeroVideoClient />
       <Features />
       <AboutSection />
